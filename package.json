@@ -1,0 +1,12 @@
+{
+  "name": "merchants-guide-to-galaxy",
+  "version": "1.0.0",
+  "description": "Solution to the famous Merchant's Guide to Galaxy problem",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Solomon Rajkumar",
+  "license": "ISC"
+}
