@@ -1,6 +1,7 @@
 import { Handler } from './handlers/handler';
 import { AssignmentPatternHandler } from './handlers/assignmentPatternHandler';
 import { CreditPatternHandler } from './handlers/creditPatternHandler';
+import { ConversionQuestionPatternHandler } from './handlers/conversionQuestionPatternHandler';
 
 export class HandlerDeterminer {
 
@@ -13,8 +14,8 @@ export class HandlerDeterminer {
 
   handlerMap = {
     assignmentPattern: new AssignmentPatternHandler(),
-    creditPattern: new CreditPatternHandler()
-    // conversionQuestion: conversionQuestionHandler,
+    creditPattern: new CreditPatternHandler(),
+    conversionQuestion: new ConversionQuestionPatternHandler()
     // creditQuestion: creditQuestionHandler
   };
 
