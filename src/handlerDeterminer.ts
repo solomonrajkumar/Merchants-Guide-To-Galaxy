@@ -1,5 +1,6 @@
 import { Handler } from './handlers/handler';
 import { AssignmentPatternHandler } from './handlers/assignmentPatternHandler';
+import { CreditPatternHandler } from './handlers/creditPatternHandler';
 
 export class HandlerDeterminer {
 
@@ -11,8 +12,8 @@ export class HandlerDeterminer {
   };
 
   handlerMap = {
-    assignmentPattern: new AssignmentPatternHandler()
-    // creditPattern: creditPatternHandler,
+    assignmentPattern: new AssignmentPatternHandler(),
+    creditPattern: new CreditPatternHandler()
     // conversionQuestion: conversionQuestionHandler,
     // creditQuestion: creditQuestionHandler
   };
@@ -23,7 +24,7 @@ export class HandlerDeterminer {
     		return regexPatternKey;
     	}
     });
-    
+
     return this.handlerMap[`${regexPatternKeyMatch}`];
   }
 }
