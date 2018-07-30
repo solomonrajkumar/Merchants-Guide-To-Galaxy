@@ -3,6 +3,7 @@ import { HandlerDeterminer } from '../src/handlerDeterminer';
 import { AssignmentPatternHandler } from '../src/handlers/assignmentPatternHandler';
 import { CreditPatternHandler } from '../src/handlers/creditPatternHandler';
 import { ConversionQuestionPatternHandler } from '../src/handlers/conversionQuestionPatternHandler';
+import { CreditQuestionPatternHandler } from '../src/handlers/creditQuestionPatternHandler';
 
 let testInput1 = 'glob is I';
 let expectedOutput1 = new AssignmentPatternHandler();
@@ -12,6 +13,9 @@ let expectedOutput2 = new CreditPatternHandler();
 
 let testInput3 = 'how much is pish tegj glob glob ?';
 let expectedOutput3 = new ConversionQuestionPatternHandler();
+
+let testInput4 = 'how many Credits is glob prok Gold ?';
+let expectedOutput4 = new CreditQuestionPatternHandler();
 
 describe("HandlerDeterminer", () => {
     describe("determine type of handler based on input string", () => {
@@ -34,6 +38,12 @@ describe("HandlerDeterminer", () => {
 
             let testOutput3 = handlerDeterminer.determineHandler(testInput3);
             expect(testOutput3 instanceof ConversionQuestionPatternHandler).to.equal(expectedOutput3 instanceof ConversionQuestionPatternHandler);
+        });
+
+        it("should determine type of handler based on input string(credit question)", () => {
+
+            let testOutput4 = handlerDeterminer.determineHandler(testInput4);
+            expect(testOutput4 instanceof CreditQuestionPatternHandler).to.equal(expectedOutput4 instanceof CreditQuestionPatternHandler);
         });
 
     });
