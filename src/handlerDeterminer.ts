@@ -3,6 +3,7 @@ import { AssignmentPatternHandler } from './handlers/assignmentPatternHandler';
 import { CreditPatternHandler } from './handlers/creditPatternHandler';
 import { ConversionQuestionPatternHandler } from './handlers/conversionQuestionPatternHandler';
 import { CreditQuestionPatternHandler } from './handlers/creditQuestionPatternHandler';
+import { InvalidPatternHandler } from './handlers/invalidPatternHandler';
 
 export class HandlerDeterminer {
 
@@ -17,7 +18,8 @@ export class HandlerDeterminer {
     assignmentPattern: new AssignmentPatternHandler(),
     creditPattern: new CreditPatternHandler(),
     conversionQuestion: new ConversionQuestionPatternHandler(),
-    creditQuestion: new CreditQuestionPatternHandler()
+    creditQuestion: new CreditQuestionPatternHandler(),
+    invalidPattern: new InvalidPatternHandler()
   };
 
   public determineHandler(input: string): Handler {
@@ -26,7 +28,7 @@ export class HandlerDeterminer {
     		return regexPatternKey;
     	}
     });
-
-    return this.handlerMap[`${regexPatternKeyMatch}`];
+    const handler = this.handlerMap[`${regexPatternKeyMatch}`];
+    return (handler == undefined) ? this.handlerMap['invalidPattern'] : handler;
   }
 }
