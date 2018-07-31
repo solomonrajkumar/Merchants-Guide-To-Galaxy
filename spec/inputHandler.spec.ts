@@ -48,12 +48,12 @@ describe("Input Handler", () => {
         //     expect(testOutput4).to.equal(expectedOutput4);
         // });
         //
-        // it("should return expected output when Invalid Pattern String is passed", () => {
-        //
-        //     let testOutput5 = inputHandler.handleInput(testInput5);
-        //
-        //     expect(testOutput5).to.equal(expectedOutput5);
-        // });
+        it("should return expected output when Invalid Pattern String is passed", () => {
+
+            let testOutput5 = inputHandler.handleInput(testInput5);
+
+            expect(testOutput5).to.equal(expectedOutput5);
+        });
 
     })
 });

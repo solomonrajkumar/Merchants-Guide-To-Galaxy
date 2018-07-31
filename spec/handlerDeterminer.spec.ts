@@ -25,32 +25,32 @@ describe("HandlerDeterminer", () => {
     describe("determine type of handler based on input string", () => {
         let handlerDeterminer = new HandlerDeterminer();
 
-        it("should determine type of handler based on input string(assignment)", () => {
+        it("should return AssignmentPatternHandler() when assignment input string is passed", () => {
 
             let testOutput1 = handlerDeterminer.determineHandler(testInput1);
             expect(testOutput1 instanceof AssignmentPatternHandler).to.equal(expectedOutput1 instanceof AssignmentPatternHandler);
 
         });
 
-        it("should determine type of handler based on input string(credit)", () => {
+        it("should return CreditPatternHandler() when credits input string is passed", () => {
 
             let testOutput2 = handlerDeterminer.determineHandler(testInput2);
             expect(testOutput2 instanceof CreditPatternHandler).to.equal(expectedOutput2 instanceof CreditPatternHandler);
         });
 
-        it("should determine type of handler based on input string(conversion question)", () => {
+        it("should return ConversionQuestionPatternHandler() when conversion question string is passed", () => {
 
             let testOutput3 = handlerDeterminer.determineHandler(testInput3);
             expect(testOutput3 instanceof ConversionQuestionPatternHandler).to.equal(expectedOutput3 instanceof ConversionQuestionPatternHandler);
         });
 
-        it("should determine type of handler based on input string(credit question)", () => {
+        it("should return CreditQuestionPatternHandler() when credit question string is passed", () => {
 
             let testOutput4 = handlerDeterminer.determineHandler(testInput4);
             expect(testOutput4 instanceof CreditQuestionPatternHandler).to.equal(expectedOutput4 instanceof CreditQuestionPatternHandler);
         });
 
-        it("should determine type of handler based on input string(invalid question/statement)", () => {
+        it("should return InvalidPatternHandler() when invalid question/statement is passed", () => {
 
             let testOutput5 = handlerDeterminer.determineHandler(testInput5);
             expect(testOutput5 instanceof InvalidPatternHandler).to.equal(expectedOutput5 instanceof InvalidPatternHandler);

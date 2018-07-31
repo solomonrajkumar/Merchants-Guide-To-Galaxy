@@ -1,8 +1,9 @@
 import { Handler } from './handler';
 
 export class CreditPatternHandler implements Handler{
-  public handleInput(input: string) {
+  public handleInput(input: string): string {
     console.log('handling input ' + input);
-    // handle assignment patterns here
+    // handle credit patterns here
+    return "";
   }
 }
