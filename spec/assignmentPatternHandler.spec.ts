@@ -17,6 +17,14 @@ let expectedOutput4 = {
 let testInput3 = 'pish is X';
 let expectedOutput5 = 3;
 
+let testInput4 = 'tegj is L';
+let expectedOutput6 = {
+  'glob': 'I',
+  'prok': 'V',
+  'pish': 'X',
+  'tegj': 'L'
+};
+
 
 describe("Assignment Pattern Handler", () => {
     describe("handle Assignment Pattern Input passed", () => {
@@ -52,6 +60,13 @@ describe("Assignment Pattern Handler", () => {
             let itemValueMap = Config.initMap.itemValueMap;
             let testOutput = Object.keys(itemValueMap).length;
             expect(testOutput).to.equal(expectedOutput5);
+        });
+
+        it("should validate the contents of initMap.itemValueMap when Assignment Pattern String is passed", () => {
+            assignmentPatternHandler.handleInput(testInput4);
+            let itemValueMap = Config.initMap.itemValueMap;
+            let expectedOutput = JSON.stringify(expectedOutput6) === JSON.stringify(itemValueMap)
+            expect(true).to.equal(expectedOutput);
         });
 
     })
