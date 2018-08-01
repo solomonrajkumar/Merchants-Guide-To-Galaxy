@@ -9,8 +9,6 @@ export class MerchantsGuide {
   }
 
   public determineOutput(input): string[] {
-    // handle Input - determine handler type and pass input accordingly
-    //handleInput(input);
     input.map(individualInput => {
       this.inputHandler.handleInput(individualInput);
     });

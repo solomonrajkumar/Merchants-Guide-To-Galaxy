@@ -9,9 +9,7 @@ export class InputHandler {
 
   public handleInput(input: string): string {
     this.handler = this.handlerDeterminer.determineHandler(input);
-    //console.log(this.handler);
     let output = this.handler.handleInput(input);
-    //console.log(object);
     return output;
   }
 
