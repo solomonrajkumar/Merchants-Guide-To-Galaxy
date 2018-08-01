@@ -14,6 +14,9 @@ let expectedOutput4 = {
   'prok': 'V'
 };
 
+let testInput3 = 'pish is X';
+let expectedOutput5 = 3;
+
 
 describe("Assignment Pattern Handler", () => {
     describe("handle Assignment Pattern Input passed", () => {
@@ -42,6 +45,13 @@ describe("Assignment Pattern Handler", () => {
             let itemValueMap = Config.initMap.itemValueMap;
             let expectedOutput = JSON.stringify(expectedOutput4) === JSON.stringify(itemValueMap)
             expect(true).to.equal(expectedOutput);
+        });
+
+        it("should update initMap.itemValueMap when Assignment Pattern String is passed - validate size of itemValueMap", () => {
+            assignmentPatternHandler.handleInput(testInput3);
+            let itemValueMap = Config.initMap.itemValueMap;
+            let testOutput = Object.keys(itemValueMap).length;
+            expect(testOutput).to.equal(expectedOutput5);
         });
 
     })
