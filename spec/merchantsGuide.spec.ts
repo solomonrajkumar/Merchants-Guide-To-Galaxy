@@ -16,7 +16,7 @@ let testInput = [
   'how much wood could a woodchuck chuck if a woodchuck could chuck wood ?'
 ];
 
-let expectedOutput = [
+let expectedOutput1 = [
   'pish tegj glob glob is 42',
   'glob prok Silver is 68 Credits',
   'glob prok Gold is 57800 Credits',
@@ -24,14 +24,16 @@ let expectedOutput = [
   'I have no idea what you are talking about'
 ];
 
-// describe("MerchantsGuide", () => {
-//     describe("determineTestOutput", () => {
-//         it("should return expected test output", () => {
-//             let merchantsGuide = new MerchantsGuide();
-//
-//             let testOutput = merchantsGuide.determineOutput(testInput);
-//
-//             expect(testOutput).to.equal(expectedOutput);
-//         });
-//     })
-// });
+let expectedOutput2 = true;
+
+describe("MerchantsGuide", () => {
+    describe("determineTestOutput", () => {
+        it("should return expected test output", () => {
+            let merchantsGuide = new MerchantsGuide();
+
+            let testOutput1 = merchantsGuide.determineOutput(testInput);
+            let testOutput2 = JSON.stringify(testOutput1) === JSON.stringify(expectedOutput1);
+            expect(testOutput2).to.equal(expectedOutput2);
+        });
+    })
+});

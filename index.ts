@@ -22,4 +22,4 @@ console.log('Test Input:');
 console.log(input);
 
 console.log('Test Output:');
-merchantsGuide.determineOutput(input);
+console.log(merchantsGuide.determineOutput(input));
