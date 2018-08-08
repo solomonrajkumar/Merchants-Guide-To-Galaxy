@@ -1,22 +1,23 @@
-import * as _ from "lodash";
 
-import { Handler } from './handler';
-import { Config } from '../config/config';
-import { RomanNumeralsParser } from '../parser/romanNumeralsParser';
+// import * as _ from "lodash";
 
-export class CreditPatternHandler implements Handler{
+// import { Handler } from './handler';
+// import { Context } from '../config/context';
+// import { RomanNumeralsParser } from '../parser/romanNumeralsParser';
 
-  public handleInput(input: string): string {
-    let romanNumeralsParser = new RomanNumeralsParser();
-    const REGEX_PATTERN = /\sis\s|\sCredits\s*/;
-    const [creditStatement, finalCredit] = input.split(REGEX_PATTERN).filter(splitValue => splitValue != '');
-    const itemsListInCreditStatement = _.dropRight(creditStatement.split(' '));
-    const multiplierInCreditStatement = _.last(creditStatement.split(' '));
-    const itemsRomanValueInCreditStatement = itemsListInCreditStatement.map((item) => Config.initMap.itemValueMap[item])
-                                                                       .join('');
-    const itemsValueInCreditStatement = romanNumeralsParser.getValueOfRomanNumber(itemsRomanValueInCreditStatement);
-    const multiplierValue = Number(finalCredit)/itemsValueInCreditStatement;
-    Config.initMap.creditMultiplierMap[multiplierInCreditStatement] = multiplierValue;
-    return "";
-  }
-}
+// export class CreditPatternHandler implements Handler{
+
+//   public handleInput(input: string): string {
+//     let romanNumeralsParser = new RomanNumeralsParser();
+//     const REGEX_PATTERN = /\sis\s|\sCredits\s*/;
+//     const [creditStatement, finalCredit] = input.split(REGEX_PATTERN).filter(splitValue => splitValue != '');
+//     const itemsListInCreditStatement = _.dropRight(creditStatement.split(' '));
+//     const multiplierInCreditStatement = _.last(creditStatement.split(' '));
+//     const itemsRomanValueInCreditStatement = itemsListInCreditStatement.map((item) => Context.getInstance().itemValue(item))
+//                                                                        .join('');
+//     const itemsValueInCreditStatement = romanNumeralsParser.getValueOfRomanNumber(itemsRomanValueInCreditStatement);
+//     const multiplierValue = Number(finalCredit)/itemsValueInCreditStatement;
+//     Context.getInstance().updateCreditMultiplierMap(multiplierInCreditStatement, multiplierValue);
+//     return "";
+//   }
+// }

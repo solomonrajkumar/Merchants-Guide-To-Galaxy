@@ -27,12 +27,12 @@ describe("Input Handler", () => {
             expect(testOutput1).to.equal(expectedOutput1);
         });
 
-        it("should return \"\" when Credit Pattern String is passed", () => {
+        // it("should return \"\" when Credit Pattern String is passed", () => {
 
-            let testOutput2 = inputHandler.handleInput(testInput2);
+        //     let testOutput2 = inputHandler.handleInput(testInput2);
 
-            expect(testOutput2).to.equal(expectedOutput2);
-        });
+        //     expect(testOutput2).to.equal(expectedOutput2);
+        // });
 
         // it("should return expected output when Conversion Question Pattern String is passed", () => {
         //
