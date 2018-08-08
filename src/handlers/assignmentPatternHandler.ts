@@ -1,12 +1,12 @@
 import { Handler } from './handler';
-import { Config } from '../config/config';
+import { Context } from '../context';
 
 export class AssignmentPatternHandler implements Handler {
 
-  public handleInput(input: string): string {
+  handleInput(input: string): string {
     const REGEX_PATTERN = /\sis\s/;
-    const [key, value] = input.split(REGEX_PATTERN);
-    Config.initMap.itemValueMap[key] = value;
+    const [item, value] = input.split(REGEX_PATTERN);
+    Context.context().updateItemValueMap(item, value);
     return "";
   }
 }
