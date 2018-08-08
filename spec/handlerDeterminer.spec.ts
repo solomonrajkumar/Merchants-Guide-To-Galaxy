@@ -16,11 +16,7 @@ let expectedOutput1 = new AssignmentPatternHandler();
 // let expectedOutput3 = new ConversionQuestionPatternHandler();
 
 // let testInput4 = 'how many Credits is glob prok Gold ?';
-<<<<<<< HEAD
 // // let expectedOutput4 = new CreditQuestionPatternHandler();
-=======
-// let expectedOutput4 = new CreditQuestionPatternHandler();
->>>>>>> 3104c03026cb53a4f32cfb4086e284de9fbbf094
 
 let testInput5 = 'how much wood could a woodchuck chuck if a woodchuck could chuck wood ?';
 let expectedOutput5 = new InvalidPatternHandler();
@@ -36,7 +32,6 @@ describe("HandlerDeterminer", () => {
 
         });
 
-<<<<<<< HEAD
 //         it("should return CreditPatternHandler() when credits input string is passed", () => {
 
 //             let testOutput2 = handlerDeterminer.determineHandler(testInput2);
@@ -54,25 +49,6 @@ describe("HandlerDeterminer", () => {
 //             let testOutput4 = handlerDeterminer.determineHandler(testInput4);
 //             expect(testOutput4 instanceof CreditQuestionPatternHandler).to.equal(expectedOutput4 instanceof CreditQuestionPatternHandler);
 //         });
-=======
-        // it("should return CreditPatternHandler() when credits input string is passed", () => {
-
-        //     let testOutput2 = handlerDeterminer.determineHandler(testInput2);
-        //     expect(testOutput2 instanceof CreditPatternHandler).to.equal(expectedOutput2 instanceof CreditPatternHandler);
-        // });
-
-        // it("should return ConversionQuestionPatternHandler() when conversion question string is passed", () => {
-
-        //     let testOutput3 = handlerDeterminer.determineHandler(testInput3);
-        //     expect(testOutput3 instanceof ConversionQuestionPatternHandler).to.equal(expectedOutput3 instanceof ConversionQuestionPatternHandler);
-        // });
-
-        // it("should return CreditQuestionPatternHandler() when credit question string is passed", () => {
-
-        //     let testOutput4 = handlerDeterminer.determineHandler(testInput4);
-        //     expect(testOutput4 instanceof CreditQuestionPatternHandler).to.equal(expectedOutput4 instanceof CreditQuestionPatternHandler);
-        // });
->>>>>>> 3104c03026cb53a4f32cfb4086e284de9fbbf094
 
         // it("should return InvalidPatternHandler() when invalid question/statement is passed", () => {
 
