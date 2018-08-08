@@ -21,27 +21,27 @@ describe("Roman Numerals Parser", () => {
 
         let romanNumeralsParser = new RomanNumeralsParser();
 
-        it("should return 2006 when MMVI is passed", () => {
+        it("should return 2006 when \'MMVI\' is passed", () => {
             let testOutput1 = romanNumeralsParser.getValueOfRomanNumber(testInput1);
             expect(testOutput1).to.equal(expectedOutput1);
         });
 
-        it("should return 1944 when MCMXLIV is passed", () => {
+        it("should return 1944 when \'MCMXLIV\' is passed", () => {
             let testOutput1 = romanNumeralsParser.getValueOfRomanNumber(testInput2);
             expect(testOutput1).to.equal(expectedOutput2);
         });
 
-        it("should return 0 when XLX is passed", () => {
+        it("should return 0 when \'XLX\' is passed", () => {
             let testOutput1 = romanNumeralsParser.getValueOfRomanNumber(testInput3);
             expect(testOutput1).to.equal(expectedOutput3);
         });
 
-        it("should return 0 when VVX is passed", () => {
+        it("should return 0 when \'VVX\' is passed", () => {
             let testOutput1 = romanNumeralsParser.getValueOfRomanNumber(testInput4);
             expect(testOutput1).to.equal(expectedOutput4);
         });
 
-        it("should return 63 when LXIII is passed", () => {
+        it("should return 63 when \'LXIII\' is passed", () => {
             let testOutput1 = romanNumeralsParser.getValueOfRomanNumber(testInput5);
             expect(testOutput1).to.equal(expectedOutput5);
         });
